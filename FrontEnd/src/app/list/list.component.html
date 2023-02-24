@@ -1,0 +1,12 @@
+<h2 class="heading">Tour of Heroes</h2>
+<div class="center">
+<table>
+
+  <tr *ngFor="let hero of heroes ; let i = index" [className]="randomColor[i]">
+    <td>{{hero.name}}</td>
+    <td>{{hero.power}}</td>
+    <td *ngFor = "let stat of hero.stats">{{stat.key}} : {{stat.value }}</td>
+    <td><button (click)="Evolve(hero)">Evolve</button></td>
+  </tr>
+</table>
+</div>
